@@ -20,20 +20,27 @@ if (!require("rminiconda"))
 packageVersion("reticulate")
 
 ```
+Testes Python e R
+
+```{r}
+eu_gosto_de_R <- "nossa, como você é legal!"
+eu_gosto_de_R
+```
 
 
 ```{python}
 eu_gosto_de_python = "tudo bem, vida que segue" ## KKK só um teste gente
 print(eu_gosto_de_python)
-                           
 ```
+Lendo objetos do python no R, carregando pelo reticulate:
+```{r}
+library(reticulate)
+veio_do_python <- py$eu_gosto_de_python
+paste(veio_do_python, " Segue no R.")
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
 ```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Ler objetos do R no python usando o objeto R.
+'''
+```{python}
+print(r.eu_gosto_de_R+" Também no python.")
+```
