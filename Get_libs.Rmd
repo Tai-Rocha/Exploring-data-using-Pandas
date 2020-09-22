@@ -1,0 +1,39 @@
+---
+title: "Bibliotecas Pyhton"
+author: "Tainá Rocha"
+date: "22/09/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+if (!require("reticulate")) 
+  install.packages("reticulate")
+if (!require("tidyverse")) 
+  install.packages("tidyverse")
+if (!require("glue")) 
+  install.packages("glue")
+if (!require("remotes")) 
+  install.packages("remotes")
+if (!require("rminiconda")) 
+  install_github("hafen/rminiconda")
+packageVersion("reticulate")
+
+```
+
+
+```{python}
+eu_gosto_de_python = "tudo bem, vida que segue" ## KKK só um teste gente
+print(eu_gosto_de_python)
+                           
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
