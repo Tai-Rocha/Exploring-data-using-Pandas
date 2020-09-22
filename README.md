@@ -1,5 +1,5 @@
 # Exploring-data-using-Pandas
 
-###### Based on https://geo-python-site.readthedocs.io/en/latest/notebooks/L1/a-taste-of-python.html#a-taste-of-python
+###### Mix using Rmarkdown to explore gis data with python and R 
 
-https://geo-python.github.io/site/notebooks/L5/exploring-data-using-pandas.html
+###### Based on https://geo-python-site.readthedocs.io/en/latest/notebooks/L1/a-taste-of-python.html#a-taste-of-python and https://geo-python.github.io/site/notebooks/L5/exploring-data-using-pandas.html

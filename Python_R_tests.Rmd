@@ -27,7 +27,6 @@ eu_gosto_de_R <- "nossa, como você é legal!"
 eu_gosto_de_R
 ```
 
-
 ```{python}
 eu_gosto_de_python = "tudo bem, vida que segue" ## KKK só um teste gente
 print(eu_gosto_de_python)
@@ -44,3 +43,5 @@ Ler objetos do R no python usando o objeto R.
 ```{python}
 print(r.eu_gosto_de_R+" Também no python.")
 ```
+
+
