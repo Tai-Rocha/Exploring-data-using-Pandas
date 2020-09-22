@@ -1,5 +1,5 @@
 ---
-title: "Bibliotecas Pyhton"
+title: "Mix code to explore gis data with python and R"
 author: "Tainá Rocha"
 date: "22/09/2020"
 output: html_document
