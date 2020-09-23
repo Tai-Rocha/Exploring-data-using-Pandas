@@ -6,13 +6,17 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
 library(reticulate)
-py_install("pandas")
-
+#py_install("pandas")
+#py_install("anaconda") # need to fix this to install matlibplot
+#py_install("matlibplot") 
+#py_install("conda")
 ```
 
 ## R Markdown
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -20,8 +24,11 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ```{python}
 import pandas as pd
-data = pd.read_csv('./data/Kumpula-June-2016-w-metadata.txt')
+data = pd.read_csv("/home/taina/Documentos/Exploring-data-using-Pandas/data/Kumpula-June-2016-w-metadata.txt")
 print(data)
+
+## PS.: Work in the first time the I run, in the second does not work, and i need to put complet path to work agiang
+
 ```
 
 ## Including Plots
@@ -29,9 +36,53 @@ print(data)
 You can also embed plots, for example:
 
 ```{python}
-data = pd.read_csv('./data/Kumpula-June-2016-w-metadata.txt', skiprows=8)
+data = pd.read_csv('/home/taina/Documentos/Exploring-data-using-Pandas/data/Kumpula-June-2016-w-metadata.txt', skiprows=8)
 print(data)
 
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{python}
+data.head()
+```
+```{python}
+data.tail()
+```
+```{python}
+type(data)
+```
+
+DataFrame properties
+```{python}
+print(len(data))
+```
+```{python}
+print(data.shape)
+```
+
+```{python}
+print(data.columns.values)
+```
+```{python}
+len(data.index)
+```
+```{python}
+print(data.dtypes)
+```
+
+```{python}
+selection = data[['YEARMODA','TEMP']]
+print(selection)
+```
+```{python}
+type(data['TEMP']) # or use:   data.TEMP
+```
+
+Descriptive statistics
+```{python}
+data['TEMP'].mean()
+```
+```{python}
+data.describe()
+```
+
+
